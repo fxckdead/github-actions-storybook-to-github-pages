@@ -34,7 +34,7 @@ runs:
   steps:
     - name: Checkout if required
       if: ${{ inputs.checkout == 'true' }}
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
 
     - name: 'Build'
       shell: bash
@@ -51,6 +51,6 @@ runs:
 
     - id: deploy
       name: Deploy to GitHub Pages
-      uses: actions/deploy-pages@v3
+      uses: actions/deploy-pages@v4
       with:
         token: ${{ github.token }}
